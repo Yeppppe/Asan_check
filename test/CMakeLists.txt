@@ -5,6 +5,13 @@ project(AsanTest)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# 添加调试符号并禁用优化
+set(CMAKE_BUILD_TYPE Debug)
+# 确保包含完整的调试信息，禁用优化
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g3 -gdwarf-4 -O0")
+# 强制所有构建类型都包含调试信息
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g3 -gdwarf-4")
+
 # 创建可执行文件
 add_executable(asan_test main.cpp)
 
@@ -48,8 +55,16 @@ if(USE_HWASAN)
     set_target_properties(asan_test PROPERTIES LINK_FLAGS "-fsanitize=hwaddress")
 endif()
 
-# 添加其他常用的编译选项
-target_compile_options(asan_test PRIVATE -Wall -Wextra)
+# 添加其他常用的编译选项，确保包含调试信息
+target_compile_options(asan_test PRIVATE 
+    -Wall 
+    -Wextra 
+    -fno-inline  # 禁用内联以获得更好的调试体验
+    -fno-eliminate-unused-debug-symbols  # 保留所有调试符号
+)
+
+# 指定不剥离符号表
+set_target_properties(asan_test PROPERTIES LINK_FLAGS_DEBUG "-rdynamic")
 
 # 安装目标
 install(TARGETS asan_test DESTINATION bin) 

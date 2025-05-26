@@ -239,8 +239,17 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//自定义ASAN头文件的路径
+CUSTOM_ASAN_INCLUDE_PATH:PATH=
+
+//自定义ASAN库的路径
+CUSTOM_ASAN_LIB_PATH:PATH=
+
 //启用Address Sanitizer
 USE_ASAN:BOOL=ON
+
+//使用自定义ASAN库路径
+USE_CUSTOM_ASAN:BOOL=OFF
 
 //启用Hardware-assisted Address Sanitizer
 USE_HWASAN:BOOL=OFF
