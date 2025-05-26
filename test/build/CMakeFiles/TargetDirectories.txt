@@ -1,0 +1,7 @@
+/mnt/c/Users/23678/Desktop/wsl/Asan/sanitizers/test/build/CMakeFiles/asan_test.dir
+/mnt/c/Users/23678/Desktop/wsl/Asan/sanitizers/test/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/23678/Desktop/wsl/Asan/sanitizers/test/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/23678/Desktop/wsl/Asan/sanitizers/test/build/CMakeFiles/list_install_components.dir
+/mnt/c/Users/23678/Desktop/wsl/Asan/sanitizers/test/build/CMakeFiles/install.dir
+/mnt/c/Users/23678/Desktop/wsl/Asan/sanitizers/test/build/CMakeFiles/install/local.dir
+/mnt/c/Users/23678/Desktop/wsl/Asan/sanitizers/test/build/CMakeFiles/install/strip.dir

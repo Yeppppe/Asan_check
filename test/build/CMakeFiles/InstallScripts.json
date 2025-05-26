@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/c/Users/23678/Desktop/wsl/Asan/sanitizers/test/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
